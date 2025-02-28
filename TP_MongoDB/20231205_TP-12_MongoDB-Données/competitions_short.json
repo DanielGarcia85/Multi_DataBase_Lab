@@ -1,0 +1,102 @@
+[
+  {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e13"
+    },
+    "nom": "Course diplômésHEG",
+    "date": {
+      "$date": {
+        "$numberLong": "1624147200000"
+      }
+    },
+    "lieu": "Battelle",
+    "ville": "carouge",
+    "prix": 25,
+    "club": {
+      "_id": {
+        "$oid": "6374dfe529dd034579b46e0d"
+      },
+      "nom": "HEG-Running",
+      "email": "running@heg.ch",
+      "ville": "Carouge"
+    },
+    "participants": [
+      {
+        "nom": "Bon",
+        "prenom": "Jean",
+        "sexe": "M",
+        "email": "bj@heg.ch",
+        "Ville": "Genève",
+        "club": {
+          "_id": {
+            "$oid": "6374dfe529dd034579b46e0f"
+          },
+          "nom": "Traînes-Savates BDD",
+          "email": "ts.bdd@heg.ch",
+          "ville": "Lausanne"
+        }
+      },
+      {
+        "nom": "Remord",
+        "prenom": "Yves",
+        "sexe": "M",
+        "email": "ry@heg.ch",
+        "Ville": "Genève",
+        "club": {
+          "_id": {
+            "$oid": "6374dfe529dd034579b46e0d"
+          },
+          "nom": "HEG-Running",
+          "email": "running@heg.ch",
+          "ville": "Carouge"
+        }
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e14"
+    },
+    "nom": "Tour du Campus",
+    "date": {
+      "$date": {
+        "$numberLong": "1648252800000"
+      }
+    },
+    "lieu": "Battelle",
+    "ville": "Carouge",
+    "prix": 10,
+    "club": {
+      "_id": {
+        "$oid": "6374dfe529dd034579b46e0d"
+      },
+      "nom": "HEG-Running",
+      "email": "running@heg.ch",
+      "ville": "Carouge"
+    },
+    "participants": [
+      {
+        "nom": "Bon",
+        "prenom": "Jean",
+        "sexe": "M",
+        "email": "bj@heg.ch",
+        "Ville": "Genève",
+        "club": {
+          "_id": {
+            "$oid": "6374dfe529dd034579b46e0f"
+          },
+          "nom": "Traînes-Savates BDD",
+          "email": "ts.bdd@heg.ch",
+          "ville": "Lausanne"
+        }
+      },
+      {
+        "nom": "Terieur",
+        "prenom": "Alain",
+        "sexe": "M",
+        "email": "ti@heg.ch",
+        "Ville": "Genève"
+      }
+    ]
+  }
+]

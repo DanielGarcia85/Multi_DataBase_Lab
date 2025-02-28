@@ -1,0 +1,44 @@
+Document{
+	nom=Course diplômésHEG,
+	date=Sun Jun 20 02:00:00 CEST 2021,
+	lieu=Battelle,
+	ville=carouge,
+	prix=25,
+	club = Document{
+			nom=HEG-Running,
+			email=running@heg.ch,
+			ville=Carouge},
+	participants = [
+			Document{
+				nom=Bon,
+				prenom=Jean,
+				sexe=M,
+				email=bj@heg.ch,
+				Ville=Genève,
+				club= Document{
+				nom=Traînes-Savates BDD,
+				email=ts.bdd@heg.ch,
+				ville=Lausanne}},
+			Document{
+				nom=Remord,
+				prenom=Yves,
+				sexe=M,
+				email=ry@heg.ch,
+				Ville=Genève,
+				club = 
+					Document{
+						nom=HEG-Running,
+						email=running@heg.ch,
+						ville=Carouge}},
+			Document{
+				nom=Terieur,
+				prenom=Alex,
+				sexe=M,
+				email=ta@hes.ch,
+				Ville=Genève,
+				club=
+					Document{
+						nom=HEG-Running,
+						email=running@heg.ch,
+						ville=Carouge}}]
+}

@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e0d"
+  },
+  "nom": "HEG-Running",
+  "email": "running@heg.ch",
+  "ville": "Carouge"
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e0e"
+  },
+  "nom": "Football Club 62-21",
+  "email": "fc6221@heg.ch",
+  "ville": "Genève"
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e0f"
+  },
+  "nom": "Traînes-Savates BDD",
+  "email": "ts.bdd@heg.ch",
+  "ville": "Lausanne"
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e10"
+  },
+  "nom": "HEG-SwimmingClub",
+  "email": "swimm@heg.ch",
+  "ville": "genève"
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e11"
+  },
+  "nom": "HEG-PédaleClub",
+  "email": "velo@heg.ch",
+  "ville": "Genève"
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e12"
+  },
+  "nom": "Aviron Club HEG",
+  "email": "aviron@heg.ch",
+  "ville": "Lausanne"
+}]

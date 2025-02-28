@@ -1,0 +1,1186 @@
+[{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e13"
+  },
+  "nom": "Course diplômésHEG",
+  "date": {
+    "$date": {
+      "$numberLong": "1624147200000"
+    }
+  },
+  "lieu": "Battelle",
+  "ville": "carouge",
+  "prix": 25,
+  "club": {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e0d"
+    },
+    "nom": "HEG-Running",
+    "email": "running@heg.ch",
+    "ville": "Carouge"
+  },
+  "participants": [
+    {
+      "nom": "Bon",
+      "prenom": "Jean",
+      "sexe": "M",
+      "email": "bj@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Remord",
+      "prenom": "Yves",
+      "sexe": "M",
+      "email": "ry@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Terieur",
+      "prenom": "Alex",
+      "sexe": "M",
+      "email": "ta@hes.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Dissoire",
+      "prenom": "Sam",
+      "sexe": "M",
+      "Ville": "genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Dorsa",
+      "prenom": "Elsa",
+      "sexe": "F",
+      "email": "de@hem.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e10"
+        },
+        "nom": "HEG-SwimmingClub",
+        "email": "swimm@heg.ch",
+        "ville": "genève"
+      }
+    },
+    {
+      "nom": "Onyme",
+      "prenom": "Anne",
+      "sexe": "F",
+      "email": "oa@hes.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Carre",
+      "prenom": "Otto",
+      "sexe": "M",
+      "email": "co@heg.ch",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e10"
+        },
+        "nom": "HEG-SwimmingClub",
+        "email": "swimm@heg.ch",
+        "ville": "genève"
+      }
+    },
+    {
+      "nom": "Hochon",
+      "prenom": "Paul",
+      "sexe": "M",
+      "email": "hp@eig.ch",
+      "Ville": "genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Honnete",
+      "prenom": "Camille",
+      "sexe": "F",
+      "Ville": "Lausanne",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Aiterie",
+      "prenom": "Marc",
+      "sexe": "M",
+      "email": "am@eig.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Sue",
+      "prenom": "Alain",
+      "sexe": "M",
+      "email": "sa@HEM.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Position",
+      "prenom": "paul",
+      "sexe": "M",
+      "Ville": "Lausanne",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Metre",
+      "prenom": "Géo",
+      "sexe": "M",
+      "email": "mg@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Hitmieux",
+      "prenom": "Elmer",
+      "sexe": "M",
+      "email": "he@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Ition",
+      "prenom": "Aude",
+      "sexe": "F",
+      "email": "ia@Hem.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e14"
+  },
+  "nom": "Tour du Campus",
+  "date": {
+    "$date": {
+      "$numberLong": "1648252800000"
+    }
+  },
+  "lieu": "Battelle",
+  "ville": "Carouge",
+  "prix": 10,
+  "club": {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e0d"
+    },
+    "nom": "HEG-Running",
+    "email": "running@heg.ch",
+    "ville": "Carouge"
+  },
+  "participants": [
+    {
+      "nom": "Bon",
+      "prenom": "Jean",
+      "sexe": "M",
+      "email": "bj@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Terieur",
+      "prenom": "Alain",
+      "sexe": "M",
+      "email": "ti@heg.ch",
+      "Ville": "Genève"
+    },
+    {
+      "nom": "Dissoire",
+      "prenom": "Sam",
+      "sexe": "M",
+      "Ville": "genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Carre",
+      "prenom": "Otto",
+      "sexe": "M",
+      "email": "co@heg.ch",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e10"
+        },
+        "nom": "HEG-SwimmingClub",
+        "email": "swimm@heg.ch",
+        "ville": "genève"
+      }
+    },
+    {
+      "nom": "Honnete",
+      "prenom": "Camille",
+      "sexe": "F",
+      "Ville": "Lausanne",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Logie",
+      "prenom": "Géo",
+      "sexe": "M",
+      "email": "lg@heg.ch",
+      "Ville": "Lausanne",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Aiterie",
+      "prenom": "Marc",
+      "sexe": "M",
+      "email": "am@eig.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Sue",
+      "prenom": "Alain",
+      "sexe": "M",
+      "email": "sa@HEM.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Metre",
+      "prenom": "Géo",
+      "sexe": "M",
+      "email": "mg@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "De Lune",
+      "prenom": "Claire",
+      "sexe": "F",
+      "email": "dc@Hes.ch",
+      "Ville": "Nyon",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Hitmieux",
+      "prenom": "Elmer",
+      "sexe": "M",
+      "email": "he@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Ition",
+      "prenom": "Aude",
+      "sexe": "F",
+      "email": "ia@Hem.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Tim",
+      "prenom": "Vincent",
+      "sexe": "M",
+      "email": "tv@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Atan",
+      "prenom": "Charles",
+      "sexe": "M",
+      "email": "ac@eig.ch",
+      "Ville": "Lausanne",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e15"
+  },
+  "nom": "TouDouMollo-Run",
+  "date": {
+    "$date": {
+      "$numberLong": "1667174400000"
+    }
+  },
+  "lieu": "Bout-du-monde",
+  "ville": "Genève",
+  "prix": 30,
+  "club": {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e0f"
+    },
+    "nom": "Traînes-Savates BDD",
+    "email": "ts.bdd@heg.ch",
+    "ville": "Lausanne"
+  },
+  "participants": [
+    {
+      "nom": "Remord",
+      "prenom": "Yves",
+      "sexe": "M",
+      "email": "ry@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Dissoire",
+      "prenom": "Sam",
+      "sexe": "M",
+      "Ville": "genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Onyme",
+      "prenom": "Anne",
+      "sexe": "F",
+      "email": "oa@hes.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Carre",
+      "prenom": "Otto",
+      "sexe": "M",
+      "email": "co@heg.ch",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e10"
+        },
+        "nom": "HEG-SwimmingClub",
+        "email": "swimm@heg.ch",
+        "ville": "genève"
+      }
+    },
+    {
+      "nom": "Honnete",
+      "prenom": "Camille",
+      "sexe": "F",
+      "Ville": "Lausanne",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Desie",
+      "prenom": "Géo",
+      "sexe": "M",
+      "email": "dg@HEG.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Logie",
+      "prenom": "Géo",
+      "sexe": "M",
+      "email": "lg@heg.ch",
+      "Ville": "Lausanne",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Aiterie",
+      "prenom": "Marc",
+      "sexe": "M",
+      "email": "am@eig.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Tron",
+      "prenom": "Paul",
+      "sexe": "M",
+      "email": "pt@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Position",
+      "prenom": "paul",
+      "sexe": "M",
+      "Ville": "Lausanne",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Metre",
+      "prenom": "Géo",
+      "sexe": "M",
+      "email": "mg@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "De Lune",
+      "prenom": "Claire",
+      "sexe": "F",
+      "email": "dc@Hes.ch",
+      "Ville": "Nyon",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Hitmieux",
+      "prenom": "Elmer",
+      "sexe": "M",
+      "email": "he@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Ition",
+      "prenom": "Aude",
+      "sexe": "F",
+      "email": "ia@Hem.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Tim",
+      "prenom": "Vincent",
+      "sexe": "M",
+      "email": "tv@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Atan",
+      "prenom": "Charles",
+      "sexe": "M",
+      "email": "ac@eig.ch",
+      "Ville": "Lausanne",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e16"
+  },
+  "nom": "HEG-TraverséeDuLac",
+  "date": {
+    "$date": {
+      "$numberLong": "1654905600000"
+    }
+  },
+  "lieu": "Vidy",
+  "ville": "Lausanne",
+  "prix": 50,
+  "club": {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e10"
+    },
+    "nom": "HEG-SwimmingClub",
+    "email": "swimm@heg.ch",
+    "ville": "genève"
+  }
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e17"
+  },
+  "nom": "Tour du Campus",
+  "date": {
+    "$date": {
+      "$numberLong": "1660867200000"
+    }
+  },
+  "lieu": "Battelle",
+  "ville": "Carouge",
+  "prix": 10,
+  "club": {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e11"
+    },
+    "nom": "HEG-PédaleClub",
+    "email": "velo@heg.ch",
+    "ville": "Genève"
+  },
+  "participants": [
+    {
+      "nom": "Remord",
+      "prenom": "Yves",
+      "sexe": "M",
+      "email": "ry@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Terieur",
+      "prenom": "Alex",
+      "sexe": "M",
+      "email": "ta@hes.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    },
+    {
+      "nom": "Proviste",
+      "prenom": "Alain",
+      "sexe": "M",
+      "email": "pa@eig.ch",
+      "Ville": "Genève"
+    },
+    {
+      "nom": "Terieur",
+      "prenom": "Alain",
+      "sexe": "M",
+      "email": "ti@heg.ch",
+      "Ville": "Genève"
+    },
+    {
+      "nom": "Dissoire",
+      "prenom": "Sam",
+      "sexe": "M",
+      "Ville": "genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Dorsa",
+      "prenom": "Elsa",
+      "sexe": "F",
+      "email": "de@hem.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e10"
+        },
+        "nom": "HEG-SwimmingClub",
+        "email": "swimm@heg.ch",
+        "ville": "genève"
+      }
+    },
+    {
+      "nom": "Posteur",
+      "prenom": "alain",
+      "sexe": " M",
+      "email": "pa@hes.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Vanbus",
+      "prenom": "Hillary",
+      "sexe": "F",
+      "email": "vh@heg.ch",
+      "ville": "Carouge"
+    },
+    {
+      "nom": "Carre",
+      "prenom": "Otto",
+      "sexe": "M",
+      "email": "co@heg.ch",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e10"
+        },
+        "nom": "HEG-SwimmingClub",
+        "email": "swimm@heg.ch",
+        "ville": "genève"
+      }
+    },
+    {
+      "nom": "Metre",
+      "prenom": "Géo",
+      "sexe": "M",
+      "email": "mg@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e18"
+  },
+  "nom": "Course diplômésHEG",
+  "date": {
+    "$date": {
+      "$numberLong": "1656115200000"
+    }
+  },
+  "lieu": "Battelle",
+  "ville": "Carouge",
+  "prix": 30,
+  "club": {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e0d"
+    },
+    "nom": "HEG-Running",
+    "email": "running@heg.ch",
+    "ville": "Carouge"
+  },
+  "participants": [
+    {
+      "nom": "Proviste",
+      "prenom": "Alain",
+      "sexe": "M",
+      "email": "pa@eig.ch",
+      "Ville": "Genève"
+    },
+    {
+      "nom": "Terieur",
+      "prenom": "Alain",
+      "sexe": "M",
+      "email": "ti@heg.ch",
+      "Ville": "Genève"
+    },
+    {
+      "nom": "Dissoire",
+      "prenom": "Sam",
+      "sexe": "M",
+      "Ville": "genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Posteur",
+      "prenom": "alain",
+      "sexe": "M",
+      "email": "pa@hes.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Carre",
+      "prenom": "Otto",
+      "sexe": "M",
+      "email": "co@heg.ch",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e10"
+        },
+        "nom": "HEG-SwimmingClub",
+        "email": "swimm@heg.ch",
+        "ville": "genève"
+      }
+    },
+    {
+      "nom": "Vaisselle",
+      "prenom": "Aude",
+      "sexe": "F",
+      "email": "va@hem.ch",
+      "ville": "Carouge",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e12"
+        },
+        "nom": "Aviron Club HEG",
+        "email": "aviron@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Hochon",
+      "prenom": "Paul",
+      "sexe": "M",
+      "email": "hp@eig.ch",
+      "Ville": "genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Sue",
+      "prenom": "Alain",
+      "sexe": "M",
+      "email": "sa@HEM.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    },
+    {
+      "nom": "Position",
+      "prenom": "paul",
+      "sexe": "M",
+      "Ville": "Lausanne",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Metre",
+      "prenom": "Géo",
+      "sexe": "M",
+      "email": "mg@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e19"
+  },
+  "nom": "Course diplômésHEG",
+  "date": {
+    "$date": {
+      "$numberLong": "1656115200000"
+    }
+  },
+  "lieu": "Beaulieu",
+  "ville": "Lausanne",
+  "prix": 35,
+  "club": {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e12"
+    },
+    "nom": "Aviron Club HEG",
+    "email": "aviron@heg.ch",
+    "ville": "Lausanne"
+  },
+  "participants": [
+    {
+      "nom": "Dissoire",
+      "prenom": "Sam",
+      "sexe": "M",
+      "Ville": "genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0e"
+        },
+        "nom": "Football Club 62-21",
+        "email": "fc6221@heg.ch",
+        "ville": "Genève"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e1a"
+  },
+  "nom": "Triathlon HEG",
+  "date": {
+    "$date": {
+      "$numberLong": "1659744000000"
+    }
+  },
+  "lieu": "Bains des Pâquis",
+  "ville": "Genève",
+  "prix": 40,
+  "club": {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e10"
+    },
+    "nom": "HEG-SwimmingClub",
+    "email": "swimm@heg.ch",
+    "ville": "genève"
+  }
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e1b"
+  },
+  "nom": "Course diplômésHEG",
+  "date": {
+    "$date": {
+      "$numberLong": "1656115200000"
+    }
+  },
+  "lieu": "Beaulieu",
+  "ville": "Lausanne",
+  "prix": 35,
+  "club": {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e12"
+    },
+    "nom": "Aviron Club HEG",
+    "email": "aviron@heg.ch",
+    "ville": "Lausanne"
+  },
+  "participants": [
+    {
+      "nom": "Vanbus",
+      "prenom": "Hillary",
+      "sexe": "F",
+      "email": "vh@heg.ch",
+      "ville": "Carouge"
+    },
+    {
+      "nom": "Ofraise",
+      "prenom": "Charlotte",
+      "sexe": "F",
+      "email": "oc@heg.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0f"
+        },
+        "nom": "Traînes-Savates BDD",
+        "email": "ts.bdd@heg.ch",
+        "ville": "Lausanne"
+      }
+    },
+    {
+      "nom": "Ition",
+      "prenom": "Aude",
+      "sexe": "F",
+      "email": "ia@Hem.ch",
+      "Ville": "Genève",
+      "club": {
+        "_id": {
+          "$oid": "6374dfe529dd034579b46e0d"
+        },
+        "nom": "HEG-Running",
+        "email": "running@heg.ch",
+        "ville": "Carouge"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6374dfe529dd034579b46e1c"
+  },
+  "nom": "Tour du Campus",
+  "date": {
+    "$date": {
+      "$numberLong": "1687564800000"
+    }
+  },
+  "lieu": "Battelle",
+  "ville": "Carouge",
+  "club": {
+    "_id": {
+      "$oid": "6374dfe529dd034579b46e0d"
+    },
+    "nom": "HEG-Running",
+    "email": "running@heg.ch",
+    "ville": "Carouge"
+  }
+}]
