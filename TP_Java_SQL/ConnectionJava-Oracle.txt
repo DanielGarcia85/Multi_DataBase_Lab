@@ -1,0 +1,37 @@
+public static Connection oracle = null;
+    static {
+        try {
+            Connection oracle = DriverManager.getConnection(URL_ORACLE, "system", "194548");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+private void accederALaBaseOracle() {
+        // try catch obligatoire dès qu'on fait des requetes SQL
+        try {
+            oracle.createStatement().execute("CREATE TABLE Producteur (nom VARCHAR(20), lieu VARCHAR(20))");
+            ResultSet res = oracle.createStatement().executeQuery("SELECT * FROM Producteur");
+            while(res.next()){
+                System.out.println(res.getString("nom")+ " " + res.getString("lieu"));
+            }
+            oracle.createStatement().execute("INSERT INTO Producteur VALUES ('test', 'test')");
+            oracle.createStatement().execute("UPDATE...");
+            oracle.createStatement().execute("DELETE...");
+            oracle.createStatement().execute("BEGIN nomDuPkg.nomDeLaProcedure('test'); END;");
+            // Dans le cas d'une fonciton faire un executeQuery et récupérer le résultat dans un ResultSets
+
+        } catch (SQLException e) {
+
+            // faire un raise application error dans le code du trigger dans PLSQL par exemple
+            // pour pouvoir le récupérer ici
+            // utiliser les code d'erreur 20001, 20002, 20003, etc.
+            System.out.println("Erreur lors de la connexion à la base Oracle");
+            switch (e.getErrorCode()){
+                case -20001 : System.out.println("Erreur : " + e.getMessage()); e.getMessage(); break;
+                case -20002 : System.out.println("Erreur : " + e.getMessage()); break;
+            }
+        }
+    }
