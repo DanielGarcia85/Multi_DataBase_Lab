@@ -18,7 +18,6 @@ The repository is organized into different folders corresponding to each databas
 
 - **📁 Documentation** → Course slides, theroy materials and references.
 - **📁 Examen** → Exam-related exercises and projects.
-- **📁 Programmes** → Database installation files and tools.
 - **📁 TP_All** → General database exercises covering multiple topics.
 - **📁 TP_Java_SQL** → Java SQL exercises using JDBC.
 - **📁 TP_MongoDB** → ands-on exercises and projects using MongoDB queries, operations and aggregation.
