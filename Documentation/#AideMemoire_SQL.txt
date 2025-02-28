@@ -1,0 +1,112 @@
+SELECT [DISTINCT] {colonne1 AS col1, colonne2, …, colonneN | *}        -- Projection
+   FROM {table(s)} [JOIN table]                                        -- Jointure, …
+   [WHERE {condition}]                                                 -- Restriction
+      [AND, OR, NOT]
+      [WHERE ROWNUM <= 5]
+      [WHERE col1 = 'T%']
+      [WHERE col1 BETWEEN 5000 AND 6000]
+      [WHERE col1 IS [NOT] NULL]  
+      [WHERE col1 IN(x, x, ..)]
+   [GROUP BY expr [, expr] ... [HAVING condition] ]          
+   [ORDER BY {colonne(s) [ASC|DESC] [NULLS FIRST|LAST]}]               -- Tri
+
+SOUS-REQUETE
+------------
+SELECT emp_nom, emp_dep_no FROM exe_employe
+WHERE emp_dep_no = (SELECT emp_dep_no FROM exe_employe WHERE emp_nom = 'BON');
+
+SELECT * FROM exe_employe
+WHERE emp_ville [NOT] IN (SELECT dep_ville FROM exe_dept);
+
+SELECT emp_prenom, emp_nom, emp_salaire FROM exe_employe
+WHERE emp_salaire > ALL|ANY (SELECT emp_salaire FROM exe_employe WHERE emp_dep_no =1);
+
+
+OPERATEURS LOGIQUES
+-------------------
+=	Egal à
+<>	Différent de
+<	Inférieur à
+<=	Inférieur ou égal à
+>	Supérieur à
+>=	Supérieur ou égla à
+
+OPERATEURS ARITHMETIQUES
+------------------------
++	Addition
+-	Soustraction
+*	Multiplication
+/	Division
+
+OPERATEUR DE CONCATENATION
+--------------------------
+||	Concaténation
+
+AUTRES OPERATEURS
+-----------------
+LIKE 'T%'	0 ou plusieurs caractères
+LIKE 'T_'	1 seul caractère
+BETWEEN 500 AND 600
+BETWEEN Date1 AND Date2
+BETWEEN ab AND az
+IN (return VRAI ou FAUX)
+
+UPPER(chaîne_de_caractères)    -- Retourne la chaîne en majuscule
+LOWER(chaîne_de_caractères)    -- Retourne la chaîne en minuscule
+INITCAP(chaîne_de_caractères)  -- Retourne la chaîne de caractères avec l’initiale en majuscule
+LENGTH(chaîne_de_caractères)   -- Retourne la longueur de la chaîne
+
+AVG([DISTINCT|ALL] expr)          -- Moyenne des valeurs de l’expression numérique expr pour tous les enregistrements de la requête
+MIN([DISTINCT|ALL] expr)          -- Valeur minimum de l’expression expr
+MAX([DISTINCT|ALL] expr)          -- Valeur maximum de l’expression expr
+SUM([DISTINCT|ALL] expr)          -- Somme des valeurs de l’expression numérique expr
+COUNT({* | [DISTINCT|ALL] expr})  -- Compte le nombre de valeurs de l’expression expr pour tous les enregistrements de la requête
+ROUND(col1,1)                     -- Fais un arrondi avec une decimal apèrs la virugle
+
+NVL
+---
+NVL(expr1, expr2)
+-- Si expr1 contient la valeur NULL, alors retourne expr2, sinon retourne expr1.
+Ex: SELECT nvl(emp_email,'PAS DE MAIL') AS "Mail", nvl(emp_salaire, 0) FROM exe_employe;
+Ex: SELECT emp_nom, nvl(emp_salaire*5/100,150) AS commission FROM exe_employe;
+
+TO_CHAR
+-------
+TO_CHAR(num1)
+-- Pour convertir un num en string
+Ex: SELECT emp_nom, nvl(TO_CHAR(emp_salaire*5/100),'Pas de commission') FROM exe_employe;
+TO_CHAR(valeur date, format date)
+-- Pour convertir une date en string
+Ex: SELECT TO_CHAR(SYSDATE,'dd month yyyy') FROM dual;
+Ex: SELECT TO_CHAR(SYSDATE, 'month/yyyy hh mi ss') FROM dual;
+Ex: SELECT TO_CHAR(SYSDATE, 'd day dy dd w month mm/yy year cc J - hh24:mi:ss') FROM dual;
+Ex: SELECT SUBSTR(TO_CHAR(SYSDATE,'dd/month/yyyy'),4,5) AS "5 premières lettres du mois" FROM dual;
+
+DECODE
+------
+DECODE(expr, valeur1, resultat1 [,valeur2, resultat2] ... [, default])
+-- En fonction de la valeur de expr, retourne pour valeur1 le resultat1, pour valeur2 le resultat2, ainsi de suite, et dans les autres cas la valeur par défaut.
+Ex: SELECT emp_nom, DECODE(emp_etatCivil, 1, 'Célibataire', 2, 'Marié', 3, 'Inconnu') AS "État civil" FROM exe_employe;
+
+CASE
+----
+CASE { simple_case_expression | searched_case_expression } [ else_clause ] END
+-- L’expression CASE permet de représenter un IF … THEN … ELSE tout en évitant d’invoquer une fonction (par ex. : DECODE). La différence réside dans le fait que CASE respecte mieux les standards de codage et est plus simple à utiliser. Il a été introduit pour remplacer DECODE.
+Ex: SELECT emp_nom, CASE WHEN emp_salaire < 4444 THEN 'Petit salaire' WHEN emp_salaire > 7777 THEN 'Grand salaire' ELSE 'Salaire moyen' END AS "Salaire" FROM exe_employe;
+
+DATE
+----
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD/MM/YYYY hh mi ss';
+SELECT SYSDATE FROM dual;	-- Pour récup la date et heure courante
+
+TO_DATE
+TO_DATE (valeur chaîne, format date)
+-- Pour convertir une chaine de caractère en date
+Ex : SELECT TO_DATE('1 janvier 2020') FROM dual;
+
+LAST_DAY(date)                -- Retourne le dernier jour du mois.
+ADD_MONTHS(date, nombre)      -- Retourne la date issue de l'addition du nombre de mois de la date passée en paramètre.
+MONTHS_BETWEEN(date1, date2)  -- Retourne la différence en mois entre les deux dates passées en paramètres.
+NEXT_DAY(date,jour)           -- Retourne la date du premier jour spécifié postérieur à la date donnée en premier argument.
+GREATEST(date1,date2)         -- Retourne la plus récente des dates entre date1 et date2.
+LEAST(date1,date2)            -- Retourne la plus ancienne des dates entre date1 et date2.

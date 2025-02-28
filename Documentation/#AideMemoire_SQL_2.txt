@@ -1,0 +1,84 @@
+-- Creation d''une table
+CREATE TABLE test_clients (
+	idd        NUMBER              CONSTRAINT pk_clients_id PRIMARY KEY,
+	nom        VARCHAR2(25)        CONSTRAINT nn_clients_nom NOT NULL,
+	prenom     VARCHAR2(25)        CONSTRAINT nn_clients_prenom NOT NULL,
+	email      VARCHAR2(50)        CONSTRAINT uq_clients_email UNIQUE,
+	datee      DATE                DEFAULT SYSDATE,
+	date2      DATE                DEFAULT NULL,
+	active     NUMBER(1)           DEFAULT 0 CONSTRAINT nn_clients_active NOT NULL,
+	id_dep     NUMBER(5)           CONSTRAINT fk_clients_tableDep REFERENCES tableDep (autreChamps);
+
+	CONSTRAINT uq_clients UNIQUE (nom, prenom),
+	CONSTRAINT ck_clients CHECK (datee >= date2),
+	CONSTRAINT fk_clients_tableDep FOREIGN KEY (id_dep) REFERENCES tableDep (autreChamps);
+);
+
+-- Insertion valeurs
+INSERT INTO test_clients (id, nom, prenom, email) VALUES (1, 'Bob', 'Smith', 'bob@smith.com');
+INSERT INTO test_clients VALUES (2, 'John', 'Do', 'john@do.com');
+COMMIT;
+
+-- Modification valeurs
+UPDATE test_clients SET nom = 'Boby' WHERE nom = 'Bob';
+UPDATE test_clients SET nom='xxx', prenom='yyy' WHERE id=1;
+DELETE test_clients WHERE nom = 'boby';
+DELETE FROM test_clients;   -- Supprime tous les enregistrements de la table
+DELETE FROM films where codefilm between 1 and 3;
+
+-- Auto incrementation pour la valeur de la clé primaire lorsqu'on insert une nouvelle entrée
+CREATE TABLE ma_table (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50),
+    prenom VARCHAR(50)
+);
+
+-- Suppression/Modification table
+DROP TABLE test_clients;
+ALTER TABLE test_clients ADD city VARCAHR2(25);
+ALTER TABLE test_clients MODIFY city VARCAHR2(50);
+ALTER TABLE test_clients RENAME COLUMN city to ville;
+ALTER TABLE test_clients DROP COLUMN ville;
+ALTER TABLE test_clients ADD CONSTRAINT uq_client_idDep UNIQUE (id_dep);
+ALTER TABLE test_clients ADD CONSTRAINT fk_clients_tableDep FOREIGN KEY (id_dep) REFERENCES tableDep (autreChamps);
+
+-- Sequence
+CREATE SEQUENCE seq_orders_id START WITH 3 INCREMENT BY 1;
+
+INSERT INTO test_clients (seq_orders_id.nextval, 'Marc', 'Amil', 'marc@amil.com');
+COMMIT;
+ROLLBACK;
+
+-- Creation d''une vue 
+CREATE OR REPLACE test_v_category as
+SELECT 
+    cat.name as category, 
+    sum(quantity) as sum_quantity,
+    avg(buy_price) as avg_price,
+    sum(buy_price*quantity) as total_price,
+    count(*) as sold_product_count
+FROM order_product op
+JOIN products p ON p.id = op.product_id
+JOIN category cat ON cat.id = p.category_id
+GROUP BY cat.name
+
+-- Utilisation de la vue
+Comme pour une table, utiliser les noms de champs définis dans la vue
+
+-- Date
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD.MM.YYYY HH24:MI:SS';
+select 
+    sysdate,
+    trunc(sysdate,'yyyy'),
+    add_months(sysdate, -12)
+from dual;
+
+select 
+    to_char(sysdate, 'yyyy') as year,
+    to_date('05/04/2023 11:30:10', 'mm/dd/yyyy hh:mi:ss') as date_char
+from dual;
+
+--String
+
+
+    

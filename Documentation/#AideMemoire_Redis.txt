@@ -1,0 +1,222 @@
+Keys * // Permet de voir toutes les clés
+
+Commandes pour les valeurs simples :
+
+    MSET (Multi SET):
+        Syntaxe : MSET key1 value1 key2 value2 ...
+        Description : Définit plusieurs clés avec leurs valeurs correspondantes en une seule commande.
+
+    MGET (Multi GET):
+        Syntaxe : MGET key1 key2 ...
+        Description : Récupère les valeurs associées à plusieurs clés.
+
+    DEL:
+        Syntaxe : DEL key1 key2 ...
+        Description : Supprime une ou plusieurs clés.
+
+Commandes pour les listes :
+
+    KEY(*) :
+	Syntaxe : KEY(*)
+	Description : Recupère toutes les clés
+
+    LPUSH:
+        Syntaxe : LPUSH key value1 value2 ...
+        Description : Insère une ou plusieurs valeurs au début d'une liste.
+
+    LRANGE:
+        Syntaxe : LRANGE key start stop
+        Description : Récupère une plage de valeurs d'une liste.
+
+    LINSERT:
+        Syntaxe : LINSERT key BEFORE|AFTER pivot value
+        Description : Insère une valeur avant ou après une valeur existante dans une liste.
+
+    LREM:
+        Syntaxe : LREM key count value
+        Description : Supprime les occurrences de la valeur spécifiée dans une liste.
+
+Commandes pour les ensembles (sets) :
+
+    SADD:
+        Syntaxe : SADD key member1 member2 ...
+        Description : Ajoute un ou plusieurs membres à un ensemble.
+
+    SMEMBERS:
+        Syntaxe : SMEMBERS key
+        Description : Récupère tous les membres d'un ensemble.
+
+    SISMEMBER:
+        Syntaxe : SISMEMBER key member
+        Description : Vérifie si un membre donné appartient à un ensemble.
+
+    SREM:
+        Syntaxe : SREM key member1 member2 ...
+        Description : Supprime un ou plusieurs membres d'un ensemble.
+
+Commandes pour les hachages (hashes) :
+
+    HSET:
+        Syntaxe : HSET key field value
+        Description : Définit le champ d'un hachage avec une valeur.
+
+    HGET:
+        Syntaxe : HGET key field
+        Description : Récupère la valeur d'un champ dans un hachage.
+
+    HDEL:
+        Syntaxe : HDEL key field1 field2 ...
+        Description : Supprime un ou plusieurs champs d'un hachage.
+
+    HGETALL:
+        Syntaxe : HGETALL key
+        Description : Récupère tous les champs et leurs valeurs d'un hachage.
+
+    HVALS:
+        Syntaxe : HVALS key
+        Description : Récupère toutes les valeurs d'un hachage.
+
+    HKEYS:
+        Syntaxe : HKEYS key
+        Description : Récupère tous les champs d'un hachage.
+
+Commandes d'expiration :
+
+    EXPIRE:
+        Syntaxe : EXPIRE key seconds
+        Description : Définit une expiration (en secondes) pour une clé.
+
+    TTL (Time To Live):
+        Syntaxe : TTL key
+        Description : Récupère le temps restant avant l'expiration d'une clé.
+
+Notes Redis: 
+
+Demo conversion en Json<==>Objet : 
+{
+ bdd.del("44");
+        Personne p = new Personne (44, "Bon", "Jean", 1994);
+        bdd.set("44",p.toString());
+        System.out.println("Valeur clé 44, après insertion: " + bdd.get("44"));
+
+        String pers44 = new Gson().toJson(p); // conversion de l'objet Personne en Json
+
+        System.out.println("La personne au format Json: " + pers44);
+        bdd.del("44");
+        bdd.set("44", pers44);
+
+        Personne p44 = new Gson().fromJson(bdd.get("44"), Personne.class); // conversion du Json en objet Personne
+        System.out.println("La personne au format Personne: " + p44);
+    }
+
+QUELQUES FONCTIONS DANS REDIS
+
+Opérations clés-valeurs :
+1.	MSET et MGET :
+•	MSET : Permet de définir plusieurs paires clé-valeur en une seule opération.
+// Dans Redis, vous pouvez définir plusieurs paires clé-valeur en une seule opération
+jedis.mset("clé1", "valeur1", "clé2", "valeur2", "clé3", "valeur3");
+
+•	MGET : Récupère les valeurs associées à plusieurs clés spécifiées.
+// Vous pouvez récupérer les valeurs associées à plusieurs clés spécifiées
+List<String> valeurs = jedis.mget("clé1", "clé2", "clé3");
+
+•	Utilité : Ces commandes sont utiles pour des opérations en masse, permettant d'ajouter ou de récupérer plusieurs paires clé-valeur en une seule requête.
+
+2.	DEL :
+•	DEL : Supprime une ou plusieurs clés et leurs valeurs associées.
+// Supprimez une ou plusieurs clés et leurs valeurs associées
+jedis.del("clé1", "clé2", "clé3");
+
+•	Utilité : Essentiel pour la suppression de données spécifiques de la base de données.
+Opérations avec les listes :
+1.	LPUSH et LRANGE :
+•	LPUSH : Insère un ou plusieurs éléments au début d'une liste.
+// Insérez un ou plusieurs éléments au début d'une liste
+jedis.lpush("maListe", "élément1", "élément2", "élément3");
+
+•	LRANGE : Récupère une plage d'éléments d'une liste.
+// Récupérez une plage d'éléments d'une liste (par exemple, les trois premiers éléments)
+List<String> elements = jedis.lrange("maListe", 0, 2);
+
+•	Utilité : Utile pour implémenter des structures de données de type file ou pour stocker des données ordonnées avec un accès par index.
+
+2.	LINSERT et LREM :
+•	LINSERT : Insère un élément avant ou après un élément existant dans une liste.
+// Insère un élément avant ou après un élément existant dans une liste
+jedis.linsert("maListe", BinaryClient.LIST_POSITION.BEFORE, "élémentExistant", "nouvelÉlément");
+
+jedis.linsert("maListe", BinaryClient.LIST_POSITION.AFTER, "élémentExistant", "nouvelÉlément");
+
+•	LREM : Supprime des éléments d'une liste.
+// Supprime un ou plusieurs éléments d'une liste
+jedis.lrem("maListe", 2, "élémentÀSupprimer"); // Supprime jusqu'à 2 occurrences de "élémentÀSupprimer"
+
+•	Utilité : Permet de manipuler des éléments spécifiques dans une liste, en les insérant à des positions précises ou en les supprimant.
+Opérations avec les ensembles :
+1.	SADD et SMEMBERS :
+•	SADD : Ajoute un ou plusieurs membres à un ensemble.
+// Ajoute un ou plusieurs membres à un ensemble
+jedis.sadd("monEnsemble", "membre1", "membre2", "membre3");
+
+•	SMEMBERS : Récupère tous les membres d'un ensemble.
+// Récupère tous les membres d'un ensemble
+Set<String> membres = jedis.smembers("monEnsemble");
+
+•	Utilité : Utile pour des opérations d'agrégation ou pour vérifier l'appartenance à un ensemble de manière efficace.
+
+2.	SISMEMBER et SREM :
+•	SISMEMBER : Vérifie si un membre donné appartient à un ensemble.
+// Vérifie si un membre donné appartient à un ensemble
+boolean membreExiste = jedis.sismember("monEnsemble", "membreÀVérifier");
+
+•	SREM : Supprime un ou plusieurs membres d'un ensemble.
+// Supprime un ou plusieurs membres d'un ensemble
+jedis.srem("monEnsemble", "membre1", "membre2");
+
+•	Utilité : Permet de vérifier l'appartenance et de manipuler les membres d'un ensemble.
+
+Opérations avec les hachages :
+1.	HSET et HGET :
+•	HSET : Stocke un champ et sa valeur dans un hachage.
+// Stocke un champ et sa valeur dans un hachage
+jedis.hset("monHachage", "champ1", "valeur1");
+
+•	HGET : Récupère la valeur d'un champ spécifié dans un hachage.
+// Récupère la valeur d'un champ spécifié dans un hachage
+String valeur = jedis.hget("monHachage", "champ1");
+
+•	Utilité : Permet de stocker des données structurées associées à une clé spécifique.
+
+2.	HDEL, HGETALL, HVALS, HKEYS :
+•	HDEL : Supprime un ou plusieurs champs d'un hachage.
+// Supprime un ou plusieurs champs d'un hachage
+jedis.hdel("monHachage", "champ1", "champ2");
+
+•	HGETALL : Récupère tous les champs et valeurs d'un hachage.
+// Récupère tous les champs et valeurs d'un hachage
+Map<String, String> champsEtValeurs = jedis.hgetAll("monHachage");
+
+•	HVALS et HKEYS : Récupèrent respectivement toutes les valeurs et toutes les clés d'un hachage.
+// Récupère toutes les valeurs d'un hachage
+List<String> valeurs = jedis.hvals("monHachage");
+
+// Récupère toutes les clés d'un hachage
+Set<String> cles = jedis.hkeys("monHachage");
+
+•	Utilité : Permettent de manipuler et de récupérer des données structurées de type clé-valeur sous forme de hachage.
+
+Opérations d'expiration :
+1.	EXPIRE et TTL :
+•	EXPIRE : Définit une expiration en secondes pour une clé.
+// Définit une expiration en secondes pour une clé
+jedis.expire("maCle", 60); // La clé expirera après 60 secondes
+
+•	TTL : Récupère le temps de vie restant d'une clé expirante.
+// Récupère le temps de vie restant d'une clé expirante
+Long tempsDeVieRestant = jedis.ttl("maCle"); // En secondes, -1 si la clé n'expire pas, -2 si la clé n'existe pas
+
+•	Utilité : Utile pour la gestion du temps de vie des clés, permettant par exemple de supprimer automatiquement des données après un certain laps de temps.
+Ces opérations offrent une variété de fonctionnalités pour manipuler et gérer les données dans Redis, permettant une flexibilité dans la manipulation des structures de données et la gestion des clés et valeurs stockées.
+
+

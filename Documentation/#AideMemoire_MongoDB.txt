@@ -1,0 +1,117 @@
+---------
+CONNEXION
+---------
+MongoClient mgcl = MongClients.create();
+MongoDatabase mgdb = mgcl.getDatabase();
+MongoCollection mgcol = mgdb.getCollection()
+
+------
+FILTRE
+------
+Filters.eq("champ", "valeur")						// champ égale la valeur
+Filters.in("champ", "valeur", "valeur") ou ("champ", List)		// champ contient les valeurs
+Filters.exists("champ", true ou false);					// champ exite ou n'existe pas
+Filters.lt("champ", "valeur"); 						// champ plus petit que la valeur
+Filters.gt("champ", "valeur"); 						// champ plus grand que la valeur
+Filters.and(filtre1, filtre2);						// plusieurs filtre en même temps
+
+Bson filtre1 = Filters.exists("participants", false);
+Bson filtre2 = Filters.lt("date", new Date());
+
+-------------
+INSERT-DELETE
+-------------
+mgcol.deleteOne(filtre);
+mgcol.deleteMany(filtre);
+mgcol.insertOne(new Document());
+
+------
+UPDATE
+------
+mgcol.updateOne(filtre);
+// Ajoute une valeur à un tableau existant
+Bson bsup = Updates.pusch("champ", "valeur");				
+exemple : mgcol.updateOne(filtre, Updates.push("champ", New Document("champ", "valeur"))):
+// Pour ajouter un Document dans une liste de Document d'un Document
+coll.updateOne(Filters.eq("nom", "xxx"),new Document("$push", new Document("nom", Document)));
+//ou
+coll.updateOne(Filters.eq("nom", "xxx", Updates.push("nom", Docuement));
+// Modifier le champ d'un Document dans un Document
+coll.updateOne(Filters.eq("nom", "xxx"), new Document("$set", new Document("lieux", "ça marche")));
+
+------
+CURSOR
+------
+MongoCursor<Document> curs = colle.find().cursor();
+MongoCursor<Document> curs = colle.find(filtre).cursor();
+While (curs.hasNext()){
+  Document doc = curs.next();
+  String str = doc.get("nom");
+}
+
+------------
+GET DOCUMENT
+------------
+Document doc = (Document) mgcol.find(filtre).first();
+MongoCursor<Document> cur = mgcol.find(filtre).cursor();		// filtre facultatif
+
+Document doc = (Document) doc.get("champ");				// Ici on récupère un Document en accédant directement au champ d'un Document // le champ doit être un Document
+Document doc = (Document) list.get(i);					// Ici on récupère un Document depuis une liste de Document
+
+---------
+GET CHAMP
+---------
+String str = (String) doc.get("champ");
+String str = doc.getString("champ2);
+Date date = doc.getDate("champ");
+
+------------------
+OBJECT => DOCUMENT
+------------------
+String jsString = new Gson().toJson(Object);
+Document doc = Document.parse(jsString);				// On crée un Document à partir d'un String au format Json
+Document doc = Document.parse(new Gson().toJson(Object));		// On crée un Document directement à partir d'un Object
+
+------------------
+DOCUMENT => OBJECT
+------------------
+String jsString = doc.toJson();
+Object obj = new Gson().fromJson(jsString, Object.class);		// Transformer un (Document) String au format Json en Object
+Object obj = new Gson().fromJson(doc.toJson(), Object.class);		// Transformer un Document en Object
+
+----
+LIST
+----
+ArrayList<Document> list = (ArrayList<Document> mgcol.distinct("champ", Document.class).into(new ArrayList()));
+
+List<Document> list = doc.getList("champ", Document.class);		// Le champ doit être un tableau/liste dans la collection
+List<Document> list = (List) doc.get("champ");				// Le champ doit être un tableau/liste dans la collection
+
+// Pour les tableaux de Document mieux vaut utiliser ArrayList
+ArrayList<Document> listDoc = (ArrayList<Document>) doc.getList("champ", Document.class)
+
+// Récupère une liste de Document distincts de la collection coll
+ArrayList<Document> list = (ArrayList<Document>) coll.distinct("nom", Document.class).into(new ArrayList());
+
+------
+BOUCLE
+------
+// Boucle for
+for (Document doc : listDoc){}
+// Boucle for
+for(int i=0; i<list.size(); i++) {
+	String str = (String) list.get(i).get("champ");
+	String str = list.get(i).getString("champ");
+	Date date = (Date) list.get(i).get("champ");
+	Date date = list.get(5).getDate("champ");
+	Document doc = (Document) list.get(i);				// Récupère un Document depuis une liste de Document	
+	Document doc = (Document) list.get(i).get("champ");		// Ici le champ est un Document
+	String str = doc.get("champ");					// Ensuite on accède au champ de ce Document
+}
+
+ArrayList<Document> listDoc = new ArrayList<>();
+
+
+
+
+

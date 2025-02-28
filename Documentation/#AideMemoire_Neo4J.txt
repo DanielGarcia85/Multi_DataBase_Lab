@@ -1,0 +1,133 @@
+MATCH p=shortestPath((dep:Agence {no: 1})-[*]->(arr:Agence {no: 4}))  UNWIND relationships(p) AS dist RETURN dep, arr, dist.distance as dist
+
+
+MATCH p=shortestPath((dep:Agence {no: 1})-[*]->(arr:Agence {no: 4})) RETURN dep, arr, COLLECT(relationships(p)) AS relations
+-- COLLECT(relationships(p)) rassemble toutes les relations trouvées dans le chemin le plus court p dans une liste nommée relations.
+--ou
+MATCH p=shortestPath((dep:Agence {no: 1})-[*]->(arr:Agence {no: 4}))  RETURN dep, arr, relationships(p) as relations
+-- même chose on dirait
+==> La requête retourne les nœuds de départ (dep) et d'arrivée (arr), ainsi que la liste des relations (relations) en une seule ligne.
+
+==> Pour avoir sur plusieurs ligne et ainsi pouvoir récupérer les champ des relations 
+MATCH p=shortestPath((dep:Agence {no: 1})-[*]->(arr:Agence {no: 4})) UNWIND relationships(p) AS r RETURN dep, arr, r.distance
+
+-----------------------------------------------------------------
+BDD LOCAL
+-----------------------------------------------------------------
+http://localhost:7474/
+user : neo4j
+password : 19454848
+-----------------------------------------------------------------
+COMMANDE
+-----------------------------------------------------------------
+match () return ceQuonVeutRecupererDansJava ou ceQuonVeutAffichierIci
+match (noeud) return noeud
+match (noeud1) --> (noeud2) return noeud1
+match (n) return n //affiche tous les noeuds (n = nonm du noeud)
+create ()
+create (a), (b), (c) return a,b,c
+create (a) --> (b)
+create (:Prof) //permet de typer le noeud
+create (n:Prof) return n
+create (n:Prof{nom:'Garcia', prenom:'Daniel'}) return n //mettre des attribuer
+create (p:Prof{nom:'Garcia', prenom:'Daniel'}) <-[r:EST_ASSISTANT_DE{depui:2020}]- (a:Assistant{prenom:'Andi'}) return p, a, r
+match (p:Prof)
+match (p{nom:'Garcia'}
+match (p:Prof{nom:'Garcia'}
+match (e{nom:'Statller}) create (e) -[:EST_DANS]-> (Filiere{nom:'IG'}) return e
+match (n:Prof{nom:'Garcia'}) delete n
+match () -[rel]-> () delete rel // supprimer toutes les relations
+-----------------------------------------------------------------
+CREATION DE LA BDD
+------------------------------------------------------------------
+create (e:Ecole{nom:"HEG",lieu:"Genève"}) return (e)
+create (e:Ecole{nom:"EPFL",lieu:"Lausanne"}) return (e)
+create (p:Prof{nom:"Moreti",prenom:"Tibault",annee:1955}) return p
+create (p:Prof{nom:"Marcel",prenom:"Jean",annee:1955}) return p
+create (e:Etudiant{nom:"Mourad",prenom:"Jack",annee:1985}) return e
+create (:Etudiant{nom:"Dupond",prenom:"Paul",annee:1985})
+create (e:Etudiant{nom:"Garcia",prenom:"Daniel",annee:1985}) return e
+match (p) set p.label = p.nom
+match (p:Prof), (e:Ecole) where e.nom="HEG" create (p)-[:ENSEGINE_DANS]->(e)
+match (e:Etudiant {nom: "Garcia"}), (c:Ecole {nom: "EPFL"}) create (e)-[:SUIT_LES_COURS_DE]->(c)
+match (e:Etudiant{nom:"Dupond"}), (c:Ecole{nom:"HEG"}) create (e)-[:SUIT_LES_COURS_DE]->(c)
+match (e:Etudiant{nom:"Mourad"}), (c:Ecole{nom:"HEG"}) create (e)-[:SUIT_LES_COURS_DE]->(c)
+match (e:Etudiant), (q:Etudiant) create (e)-[:EST_CAMARADE_DE]->(q)
+match (e:Etudiant) -[rel]-> (e:Etudiant) delete rel
+match (e:Etudiant), (c:Ecole{nom:"HEG"}) where e.nom="Garcia" create (e)-[:TRAVAIL_A]->(c)
+match (e:Etudiant) -[s:SUIT_LES_COURS_DE]-> (q:Ecole{nom:"HEG"}) delete (s)
+match (e:Etudiant{nom:"Mourad"}), (p:Prof{nom:"Moreti"}) create (e)-[:SUIT_LES_COURS_DE]->(p)
+match (e:Etudiant{nom:"Dupond"}), (p:Prof{nom:"Marcel"}) create (e)-[:SUIT_LES_COURS_DE]->(p)
+match (e:Ecole), (q:Ecole) create (e)-[:COLLABORE_AVEC]->(q)
+match (e:Ecole)-[r:COLLABORE_AVEC]->(e:Ecole) delete (r)
+-----------------------------------------------------------------
+COMMANDE UTILE
+------------------------------------------------------------------
+// Pour retouner des relations
+MATCH p=()-[c:COLLABORE_AVEC]->() RETURN (p)
+
+// Pour retourner toutes les relaitons sous forme graphique
+MATCH p=()-[]->() RETURN (p)
+
+MATCH (a)-[b]->(c) return a,b,c
+
+// Pour tout suprrimer
+MATCH (n) DETACH DELETE n
+ou
+MATCH ()-[r]->() DELETE (r)
+MATCH (n) DELETE (n)
+
+// Pour modifier des valeur
+MATCH (p:Prof{nom:"Moreti"}) set p.label = p.nom
+MATCH (e:Etudiant {nom:"Duponp"}) set e.nom="Dupond"
+
+// Pour creer une contrainte
+CREATE CONSTRAINT FOR (n:Person) REQUIRE (n.name) IS UNIQUE
+
+// Requete avec Where
+MATCH (e:Etudiant), (c:Ecole) where e.nom="Garcia" and c.nom="EPFL" CREATE (e)-[:SUIT_LES_COURS_DE]->(c)
+ou
+MATCH (e:Etudiant {nom: "Garcia"}), (c:Ecole {nom: "EPFL"}) CREATE (e)-[:SUIT_LES_COURS_DE]->(c)
+
+// Pour récupérer les noeuds en fonction de leur relation :
+MATCH (n) – [ :ASSISTE ] – > (p:Personne {nom:’Stettler’}) RETURN n
+
+// Pour parcourir plusieurs relations (par exemple, trouver l’ami d’un ami) :
+MATCH (chr {nom:’Stettler’) – [:AMI] – > ( ) – [:AMI] – > (amidami) RETURN chr, amidami
+
+//Pour trouver un chemin entre 2 noeuds :
+MATCH (a{nom:'Stettler'}), (b{nom:'DaMota'}), path = shortestPath((a)-[*..10]-(b)) RETURN path
+MATCH p=shortestpath((b:Person{name:"Kevin Bacon"})-[*]-(m:Person{name:"Meg Ryan"})) RETURN p
+MATCH (b:Person{name:"Kevin Bacon"}), (r:Person{name:"Meg Ryan"}), p=shortestPath((b)-[*]-(r)) RETURN p
+
+// Pour créer des relations basé sur des Foreign Keys
+MATCH (p:Product),(c:Category)
+WHERE p.categoryID = c.categoryID
+CREATE (p)-[:PART_OF]->(c)
+
+MATCH (p:Product),(s:Supplier)
+WHERE p.supplierID = s.supplierID
+CREATE (s)-[:SUPPLIES]->(p)
+
+-----------------------------------------------------------------
+PARTIE JAVA
+-----------------------------------------------------------------
+public class DemoNeo4J{
+	public DemoNeo4J(){
+		System.out.println("Demo Neo4J");
+	
+	// connexion à la session de la bdd Neo4J
+	Session bddNeo4J = GraphDatabase.driver("url", AuthTokens.basic("user","pswd")).session();
+	
+	// lancer une instruction Cypher (langage d'accèes à Neo4J
+	Result res = bdd.run("MATCH (n) RETURN n");
+	
+	//parcouri (et interpreter) les résultats
+	While (res.hasNext()){
+		Record rec = res.next();
+		System.out.println(rec.get("n").get("nom")); // n, nom = nom des attribut des noeuds
+		}
+	}
+}
+
+
