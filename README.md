@@ -49,7 +49,7 @@ Before starting, ensure you have installed:
 
 ## License
 
-This project is licensed under the **Creative Commons Attribution-ShareAlike (CC BY-SA)** license.  
+This project is licensed under the *Creative Commons Attribution-ShareAlike (CC BY-SA)* license.  
 
 ## Author
 
