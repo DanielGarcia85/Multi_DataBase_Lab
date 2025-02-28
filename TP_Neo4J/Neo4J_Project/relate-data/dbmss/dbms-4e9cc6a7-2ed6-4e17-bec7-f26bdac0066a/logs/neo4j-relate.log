@@ -1,0 +1,131 @@
+﻿Powershell : Validating Neo4j configuration: C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanc
+eeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\conf\neo4j.conf
+Au caractère C:\Users\garciad\AppData\Local\Neo4j\Relate\Cache\neo4j-start.ps1:11 : 1
++ Powershell -NoProfile -NonInteractive -NoLogo `
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Validating Neo4...conf\neo4j.conf:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+5 issues found.
+Warning: Use of deprecated setting 'dbms.windows_service_name'. It is replaced by 'server.windows_service_name'.
+Warning: Use of deprecated setting 'dbms.jvm.additional'. It is replaced by 'server.jvm.additional'.
+Warning: Use of deprecated setting 'dbms.memory.pagecache.size'. It is replaced by 'server.memory.pagecache.size'.
+Warning: Use of deprecated setting 'dbms.memory.heap.max_size'. It is replaced by 'server.memory.heap.max_size'.
+Warning: Use of deprecated setting 'dbms.memory.heap.initial_size'. It is replaced by 
+'server.memory.heap.initial_size'.
+
+Validating user Log4j configuration: C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDon
+nees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\conf\user-logs.xml
+No issues found.
+
+Validating server Log4j configuration: C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesD
+onnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\conf\server-logs.xml
+No issues found.
+
+Configuration file validation successful (with warnings).
+Directories in use:
+home:         C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a
+config:       C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\conf
+logs:         C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\logs
+plugins:      C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\plugins
+import:       C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\import
+data:         C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\data
+certificates: C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\certificates
+licenses:     C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\licenses
+run:          C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\run
+Starting Neo4j.
+2023-12-01 15:51:57.549+0000 INFO  Logging config in use: File 'C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\conf\user-logs.xml'
+2023-12-01 15:51:57.567+0000 INFO  The license agreement was accepted with environment variable NEO4J_ACCEPT_LICENSE_AGREEMENT=yes when the Software was started.
+
+
+2023-12-01 15:51:57.600+0000 WARN  Use of deprecated setting 'dbms.windows_service_name'. It is replaced by 'server.windows_service_name'.
+2023-12-01 15:51:57.600+0000 WARN  Use of deprecated setting 'dbms.jvm.additional'. It is replaced by 'server.jvm.additional'.
+2023-12-01 15:51:57.600+0000 WARN  Use of deprecated setting 'dbms.memory.pagecache.size'. It is replaced by 'server.memory.pagecache.size'.
+2023-12-01 15:51:57.601+0000 WARN  Use of deprecated setting 'dbms.memory.heap.max_size'. It is replaced by 'server.memory.heap.max_size'.
+2023-12-01 15:51:57.601+0000 WARN  Use of deprecated setting 'dbms.memory.heap.initial_size'. It is replaced by 'server.memory.heap.initial_size'.
+2023-12-01 15:51:57.602+0000 INFO  Starting...
+2023-12-01 15:51:59.366+0000 INFO  ======== Neo4j 5.12.0 ========
+2023-12-01 15:51:59.388+0000 INFO  This instance is ServerId{b3756f30} (b3756f30-b544-4b8c-a792-ad3c25165c27)
+2023-12-01 15:52:02.146+0000 INFO  Default database 'neo4j' is created
+2023-12-01 15:52:02.536+0000 INFO  Sending metrics to CSV file at C:\Users\garciad\OneDrive\#D@niel#\#_HEG_BIS\Semestre_3\62-31_GestionAvanceeDesDonnees\TP_Neo4J\Neo4J_Project\relate-data\dbmss\dbms-4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a\metrics
+2023-12-01 15:52:02.577+0000 INFO  Bolt enabled on localhost:7687.
+2023-12-01 15:52:02.578+0000 INFO  Bolt (Routing) enabled on localhost:7688.
+2023-12-01 15:52:03.200+0000 INFO  HTTP enabled on localhost:7474.
+2023-12-01 15:52:03.201+0000 INFO  Remote interface available at http://localhost:7474/
+2023-12-01 15:52:03.204+0000 INFO  id: B5F061E1F7C10EDDF306C37D9C454570D9E6CCE7672FE7EF98E17B65E3CD9483
+2023-12-01 15:52:03.204+0000 INFO  name: system
+2023-12-01 15:52:03.204+0000 INFO  creationDate: 2023-12-01T15:52:00.919Z
+2023-12-01 15:52:03.204+0000 INFO  Started.
+2023-12-01 15:52:06.549+0000 WARN  [bolt-4] Terminating connection due to network error
+org.neo4j.bolt.protocol.error.streaming.BoltStreamingWriteException: Failed to transmit operation result: Response write failure
+	at org.neo4j.bolt.protocol.common.fsm.response.NetworkResponseHandler.onSuccess(NetworkResponseHandler.java:184) ~[neo4j-bolt-5.12.0.jar:5.12.0]
+	at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.lambda$interrupt$6(AtomicSchedulingConnection.java:466) ~[neo4j-bolt-5.12.0.jar:5.12.0]
+	at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.executeJob(AtomicSchedulingConnection.java:340) ~[neo4j-bolt-5.12.0.jar:5.12.0]
+	at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.doExecuteJobs(AtomicSchedulingConnection.java:314) ~[neo4j-bolt-5.12.0.jar:5.12.0]
+	at org.neo4j.bolt.protocol.common.connector.connection.AtomicSchedulingConnection.executeJobs(AtomicSchedulingConnection.java:221) ~[neo4j-bolt-5.12.0.jar:5.12.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.nio.channels.ClosedChannelException
+	at io.netty.handler.codec.http.websocketx.WebSocketProtocolHandler.write(WebSocketProtocolHandler.java:113) ~[netty-codec-http-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler.write(WebSocketServerProtocolHandler.java:54) ~[netty-codec-http-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:881) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:863) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:968) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:856) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.handler.codec.MessageToMessageEncoder.write(MessageToMessageEncoder.java:113) ~[netty-codec-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:881) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:863) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:968) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:856) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at org.neo4j.bolt.protocol.common.handler.StateSignalFilterHandler.write(StateSignalFilterHandler.java:41) ~[neo4j-bolt-5.12.0.jar:5.12.0]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:881) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:863) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:968) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:856) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.handler.codec.MessageToByteEncoder.write(MessageToByteEncoder.java:120) ~[netty-codec-4.1.96.Final.jar:4.1.96.Final]
+	at org.neo4j.packstream.codec.transport.FrameSignalEncoder.write(FrameSignalEncoder.java:72) ~[neo4j-bolt-5.12.0.jar:5.12.0]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:881) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:863) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:968) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:856) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.handler.codec.MessageToByteEncoder.write(MessageToByteEncoder.java:113) ~[netty-codec-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:881) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:863) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:968) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:856) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.handler.codec.MessageToByteEncoder.write(MessageToByteEncoder.java:113) ~[netty-codec-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:881) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:863) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:968) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:856) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at org.neo4j.bolt.runtime.throttle.ChannelReadThrottleHandler.write(ChannelReadThrottleHandler.java:75) ~[neo4j-bolt-5.12.0.jar:5.12.0]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:879) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:863) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:968) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:856) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:851) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.handler.codec.MessageToMessageEncoder.writePromiseCombiner(MessageToMessageEncoder.java:140) ~[netty-codec-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.handler.codec.MessageToMessageEncoder.write(MessageToMessageEncoder.java:120) ~[netty-codec-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:881) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite(AbstractChannelHandlerContext.java:863) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:968) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.write(AbstractChannelHandlerContext.java:856) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.handler.timeout.IdleStateHandler.write(IdleStateHandler.java:302) ~[netty-handler-4.1.96.Final.jar:4.1.96.Final]
+	at org.neo4j.bolt.protocol.common.handler.KeepAliveHandler.write(KeepAliveHandler.java:117) ~[neo4j-bolt-5.12.0.jar:5.12.0]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWrite0(AbstractChannelHandlerContext.java:879) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeWriteAndFlush(AbstractChannelHandlerContext.java:940) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.AbstractChannelHandlerContext$WriteTask.run(AbstractChannelHandlerContext.java:1247) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174) ~[netty-common-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167) ~[netty-common-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) ~[netty-common-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566) ~[netty-transport-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.96.Final.jar:4.1.96.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.96.Final.jar:4.1.96.Final]
+	... 1 more
+2023-12-01 15:58:36.712+0000 INFO  Neo4j Server shutdown initiated by request
+2023-12-01 15:58:36.712+0000 INFO  Stopping...
+2023-12-01 15:58:36.714+0000 INFO  Stopped.

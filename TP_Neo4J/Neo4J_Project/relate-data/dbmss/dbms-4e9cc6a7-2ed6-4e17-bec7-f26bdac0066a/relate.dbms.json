@@ -1,0 +1,50 @@
+{
+  "name": "Graph DBMS 194e6a69",
+  "description": "",
+  "tags": [
+    "neo4j-desktop-dbms-database-194e6a69-9ce5-4b4b-9487-099ffccc7796"
+  ],
+  "id": "4e9cc6a7-2ed6-4e17-bec7-f26bdac0066a",
+  "metadata": {
+    "neo4jDesktopDbmsDatabases": [
+      {
+        "name": "neo4j",
+        "type": "standard",
+        "aliases": [],
+        "access": "read-write",
+        "address": "localhost:7687",
+        "role": "primary",
+        "writer": true,
+        "requestedStatus": "online",
+        "currentStatus": "online",
+        "statusMessage": "",
+        "default": true,
+        "home": true,
+        "constituents": [],
+        "statistics": {
+          "nodes": 0,
+          "relationships": 0,
+          "labels": 0,
+          "relationshipTypes": 0,
+          "propertyKeys": 0
+        }
+      },
+      {
+        "name": "system",
+        "type": "system",
+        "aliases": [],
+        "access": "read-write",
+        "address": "localhost:7687",
+        "role": "primary",
+        "writer": true,
+        "requestedStatus": "online",
+        "currentStatus": "online",
+        "statusMessage": "",
+        "default": false,
+        "home": false,
+        "constituents": []
+      }
+    ]
+  },
+  "isCustomPathInstallation": false
+}

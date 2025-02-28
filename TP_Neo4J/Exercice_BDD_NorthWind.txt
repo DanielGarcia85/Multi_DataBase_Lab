@@ -1,0 +1,83 @@
+----------------------
+//Créeation de la BDD
+----------------------
+LOAD CSV WITH HEADERS FROM "https://data.neo4j.com/northwind/products.csv" AS row
+CREATE (n:Product)
+SET n = row,
+n.unitPrice = toFloat(row.unitPrice),
+n.unitsInStock = toInteger(row.unitsInStock), n.unitsOnOrder = toInteger(row.unitsOnOrder),
+n.reorderLevel = toInteger(row.reorderLevel), n.discontinued = (row.discontinued <> "0")
+-------
+LOAD CSV WITH HEADERS FROM "https://data.neo4j.com/northwind/categories.csv" AS row
+CREATE (n:Category)
+SET n = row
+-------
+LOAD CSV WITH HEADERS FROM "https://data.neo4j.com/northwind/suppliers.csv" AS row
+CREATE (n:Supplier)
+SET n = row
+---------------------
+//Création des Index
+---------------------
+CREATE INDEX FOR (p:Product) ON (p.productID)
+CREATE INDEX FOR (p:Product) ON (p.productName)
+CREATE INDEX FOR (c:Category) ON (c.categoryID)
+CREATE INDEX FOR (s:Supplier) ON (s.supplierID)
+------------------------
+//Création des rélations
+-------------------------
+MATCH (p:Product),(c:Category)
+WHERE p.categoryID = c.categoryID
+CREATE (p)-[:PART_OF]->(c)
+-------
+MATCH (p:Product),(s:Supplier)
+WHERE p.supplierID = s.supplierID
+CREATE (s)-[:SUPPLIES]->(p)
+---------------------------------------
+---------------------------------------
+Exercices
+---------------------------------------
+//What categories of food does each supplier supply?
+=>
+MATCH (s:Supplier)-->(:Product)-->(c:Category) RETURN s.companyName as Company, collect(distinct c.categoryName) as Categories
+
+//Find the produce suppliers.
+=>
+MATCH (s:Supplier)-[:SUPPLIES]->(p:Product)-[:PART_OF]->(c:Category{categoryName:"Produce"}) RETURN DISTINCT s.companyName
+---------------------------------------
+---------------------------------------
+PART 2
+---------------------------------------
+---------------------------------------
+//Extension BDD
+---------------------------------------
+LOAD CSV WITH HEADERS FROM "https://data.neo4j.com/northwind/customers.csv" AS row
+CREATE (n:Customer)
+SET n = row
+-------
+LOAD CSV WITH HEADERS FROM "https://data.neo4j.com/northwind/orders.csv" AS row
+CREATE (n:Order)
+SET n = row
+-------
+CREATE INDEX FOR (n:Customer) ON (n.customerID)
+-------
+CREATE INDEX FOR (o:Order) ON (o.orderID)
+-------
+MATCH (n:Customer),(o:Order)
+WHERE n.customerID = o.customerID
+CREATE (n)-[:PURCHASED]->(o)
+-------
+LOAD CSV WITH HEADERS FROM "https://data.neo4j.com/northwind/order-details.csv" AS row
+MATCH (p:Product), (o:Order)
+WHERE p.productID = row.productID AND o.orderID = row.orderID
+CREATE (o)-[details:ORDERS]->(p)
+SET details = row,
+details.quantity = toInteger(row.quantity)
+-------
+---------------------------------------
+---------------------------------------
+Exercices
+---------------------------------------
+How many products did each customer purchase?
+=> 
+match (c:Customer)-[:PURCHASED]->(:Order)-[o:ORDERS]->(p:Product), (p)-[:PART_OF]->(:Category{categoryName:"Produce"}) return distinct c.contactName as CustName, sum(o.quantity) order by CustName
+

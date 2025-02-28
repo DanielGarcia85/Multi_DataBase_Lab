@@ -1,0 +1,43 @@
+Dans quel film a joué Tom Hanks ?
+=> MATCH (p:Person)-[:ACTED_IN]->(m:Movie) WHERE p.name="Tom Hanks" RETURN m
+=> MATCH (p:Person {name: "Tom Hanks"}) -[:ACTED_IN]-> (f:Movie) RETURN f
+
+Qui a dirigé Cloud Atlas ?
+=> MATCH (p:Person)-[:DIRECTED]->(m:Movie) WHERE m.title = "Cloud Atlas" RETURN p.name
+=> MATCH (p:Person)-[:DIRECTED]->(f:Movie {title:"Cloud Atlas"}) return p.name
+
+Qui sont les co-acteur de Tom Hanks ?
+=> MATCH (p:Person{name:"Tom Hanks"})-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(q) RETURN q.name
+
+Qui est relié à Cloud Atlas ?
+=> MATCH (p:Person)-[r]->(m:Movie{title:"Cloud Atlas"}) RETURN p.name, Type(r), r.roles
+
+Utilisez des relation de longueur variable pour trouver des films et des acteurs jusqu'à 4 "sauts" de Kevin Bacon.
+=> MATCH (Person {name:"Kevin Bacon"})-[*..4]-(h) RETURN DISTINCT h
+=> MATCH (p:Person {name:"Kevin Bacon"})-[*..4]->(a) return distinct a
+
+Utilisez l'algorithme intégré shortestPath() pour trouver le "chemin du bacon" menant à Meg Ryan.
+=> MATCH p=shortestpath((b:Person{name:"Kevin Bacon"})-[*]-(m:Person{name:"Meg Ryan"})) RETURN p
+=> MATCH (b:Person{name:"Kevin Bacon"}), (r:Person{name:"Meg Ryan"}), p=shortestPath((b)-[*]-(r)) RETURN p
+
+Étendez les coacteurs de Tom Hanks pour trouver les coacteurs qui n'ont pas travaillé avec Tom Hanks.
+=> MATCH(tom:Person {name:"Tom Hanks"})-[:ACTED_IN]->(m)<-[:ACTED_IN]-(coActors), (coActors)-[:ACTED_IN]->(m2)<-[:ACTED_IN]-(cocoActors) WHERE NOT (tom)-[:ACTED_IN]->()<-[:ACTED_IN]-(cocoActors) AND tom <> cocoActors RETURN cocoActors.name AS Recommended, count(*) AS Strength ORDER BY Strength DESC
+
+Trouver quelqu'un qui puisse présenter Tom Hanks à son co-acteur potentiel, en l'occurrence Tom Cruise.
+=> MATCH(th:Person{name:"Tom Hanks"})-[:ACTED_IN]->(m)<-[:ACTED_IN]-(coactor)-[:ACTED_IN]->(m2)<-[:ACTED_IN]-(tc:Person{name:"Tom Cruise"}) RETURN th.name, m.title, coactor.name, m2.title, tc.name	
+=> match (p1:Person{name:"Tom Hanks"})-[r1]->(m1:Movie)<-[r2]-(p2:Person), (p2:Person)-[r3]->(m2:Movie)<-[r4]-(p3:Person{name:"Tom Cruise"}) return p1.name, Type(r1), m1.title, Type(r2), p2.name, Type(r3), m2.title, Type(r4), p3.name
+
+-------------------------------------------------------------------
+
+MATCH p=shortestPath((dep:Agence {no: 1})-[*]->(arr:Agence {no: 4}))  UNWIND relationships(p) AS dist RETURN dep, arr, dist.distance as dist
+
+
+MATCH p=shortestPath((dep:Agence {no: 1})-[*]->(arr:Agence {no: 4})) RETURN dep, arr, COLLECT(relationships(p)) AS relations
+-- COLLECT(relationships(p)) rassemble toutes les relations trouvées dans le chemin le plus court p dans une liste nommée relations.
+--ou
+MATCH p=shortestPath((dep:Agence {no: 1})-[*]->(arr:Agence {no: 4}))  RETURN dep, arr, relationships(p) as relations
+-- même chose on dirait
+==> La requête retourne les nœuds de départ (dep) et d'arrivée (arr), ainsi que la liste des relations (relations) en une seule ligne.
+
+==> Pour avoir sur plusieurs ligne et ainsi pouvoir récupérer les champ des relations 
+MATCH p=shortestPath((dep:Agence {no: 1})-[*]->(arr:Agence {no: 4})) UNWIND relationships(p) AS r RETURN dep, arr, r.distance
