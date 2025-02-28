@@ -1,6 +1,6 @@
 # Multi_DataBase_Lab
 
-This repository contains a series of exercises and projects from the **62-31 Database Advance Management** course at **HEG**. It covers multiple database technologies, including **PLSQL, JAVA JDBC, MongoDB, Neo4J, and Redis**, with practical implementations.
+This repository contains a series of exercises and projects from the ***62-31 Database Advance Management*** course at **Haute École de Gestion (HEG)** It covers multiple database technologies, including **PLSQL, JAVA JDBC, MongoDB, Neo4J, and Redis**, with practical implementations.
 
 ## Features
 
@@ -53,4 +53,4 @@ This project is licensed under the **Creative Commons Attribution-ShareAlike (CC
 
 ## Author
 
-Project created by **Daniel Garcia** as part of the *62-31 Database Advance Management* course at **HEG - Geneva** during the **Autumn semester of 2025**.
+Project created by **Daniel Garcia** as part of the ***62-31 Database Advance Management*** course at **Haute École de Gestion (HEG)** during the Autumn semester of 2025.
