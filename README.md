@@ -53,4 +53,4 @@ This project is licensed under the *Creative Commons Attribution-ShareAlike (CC 
 
 ## Author
 
-Project created by **Daniel Garcia** as part of the ***62-31 Database Advance Management*** course at **Haute École de Gestion (HEG)** during the Autumn semester of 2025.
+Project created by **Daniel Garcia** as part of the ***62-31 Database Advance Management*** course at **Haute École de Gestion (HEG)** during the Autumn semester of 2023.
